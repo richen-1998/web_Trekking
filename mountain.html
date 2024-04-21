@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ace the himalaya</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!----------------------------------------------------Logo---------------------------------------------->
+      <div id="logo">
+        <a href="index.html"><img src="img/logo_1.png" /></a>
+      </div>
+
+      <nav>
+        <div class="navbar">
+          <!----------------------------------------------- NEPAL ------------------------------------------------>
+          <div class="nepal">
+            <button onclick="toggleDropdown('nepaldropdown')" class="dropbtn">
+              NEPAL<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div class="dropdown">
+              <div id="nepaldropdown" class="dropdown-content">
+                <button
+                  class="tablinks"
+                  onclick="openContent(event,'mountain')"
+                >
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Mountains
+                </button>
+                <button class="tablinks" onclick="openContent(event,'hill')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Hills
+                </button>
+              </div>
+              <div>
+                <div id="mountain" class="tabcontent">
+                  <p
+                    style="font-size: large; margin-top: 1%; margin-bottom: 0%"
+                  >
+                    Mountain
+                  </p>
+                  <p>
+                    <a href="mountain.html"> Mountain</a>
+                  </p>
+                 
+                    <a href="hill.html"> Hills</a>
+                  </p>
+
+                </div>
+                <div id="hill" class="tabcontent">
+                  <p>Hills are beautiful, shine, bright, and many more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------------------------------------ BHUTAN -------------------------------------------->
+          <div class="bhutan">
+            <button onclick="toggleDropdown('bhutandropdown')" class="dropbtn">
+              BHUTAN<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div class="dropdown">
+              <div id="bhutandropdown" class="dropdown-content">
+                <button class="tablinks" onclick="openContent(event,'bhutan1')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Bhutan1
+                </button>
+                <button class="tablinks" onclick="openContent(event,'bhutan2')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Bhutan2
+                </button>
+              </div>
+
+              <div>
+                <div id="bhutan1" class="tabcontent">
+                  <p>Bhutan1 are beautiful, shine, bright, and many more</p>
+                </div>
+                <div id="bhutan2" class="tabcontent">
+                  <p>Bhutan2 are beautiful, shine, bright, and many more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------------------------------------- TIBET -------------------------------------------------->
+          <div class="tibet">
+            <button onclick="toggleDropdown('tibetdropdown')" class="dropbtn">
+              TIBET<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div class="dropdown">
+              <div id="tibetdropdown" class="dropdown-content">
+                <button class="tablinks" onclick="openContent(event,'tibet1')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Tibet1
+                </button>
+                <button class="tablinks" onclick="openContent(event,'tibet2')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Tibet2
+                </button>
+              </div>
+              <div>
+                <div id="tibet1" class="tabcontent">
+                  <p>Tibet1 are beautiful, shine, bright, and many more</p>
+                </div>
+                <div id="tibet2" class="tabcontent">
+                  <p>Tibet2 are beautiful, shine, bright, and many more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------------------------------------- COMPANY ------------------------------------------------->
+          <div class="company">
+            <button onclick="toggleDropdown('companydropdown')" class="dropbtn">
+              COMPANY<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div id="lastcompany" class="dropdown">
+              <div id="companydropdown" class="dropdown-content">
+                <!-- <button onclick="">Company</button>
+                <button onclick="">Company1</button> -->
+                <a href="#">Company</a>
+                <a href="#">Company1</a>
+              </div>
+            </div>
+          </div>
+          <!-----------------------------------------------TOP 10 TREKS------------------------------------------>
+          <div class="top_10">
+            <button
+              onclick="toggleDropdown('topdropdown')"
+              class="dropbtn"
+              id="top_10"
+            >
+              <img src="img/star.png" />TOP 10 TREKS
+            </button>
+            <div id="lasttop" class="dropdown">
+              <div id="topdropdown" class="dropdown-content">
+                <button onclick="">Top</button>
+                <button onclick="">Top1</button>
+                <!-- <a href="#">Top</a>
+              <a href="#">Top1</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="location">
+            <!-- <button class="dropbtn" id="change_location">
+              CHANGE LOCATION<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+
+            <div id="changelocation" class="location-content">
+              <button onclick="">Top</button>
+              <button onclick="">Top1</button>
+            </div> -->
+
+            <label for="location" id="change_location">Change location</label>
+            <select name="location" id="locations">
+              <option value="Nepal">Nepal</option>
+              <option value="China">China</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-----------------------------------------------------------------------Main content------------------------------------------------------->
+    <main>
+      <p>This is mountain page</p>
+    </main>
+
+    <!----------------------------------------------------------------footer---------------------------------------------------------------------->
+    <footer>
+      <p>This is footer</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>

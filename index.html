@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ace the himalaya</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!----------------------------------------------------Logo---------------------------------------------->
+      <div id="logo">
+        <a href="index.html"><img src="img/logo_1.png" /></a>
+      </div>
+
+      <nav>
+        <div class="navbar">
+          <!----------------------------------------------- NEPAL ------------------------------------------------>
+          <div class="nepal">
+            <button onclick="toggleDropdown('nepaldropdown')" class="dropbtn">
+              NEPAL<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div class="dropdown">
+              <div id="nepaldropdown" class="dropdown-content">
+                <button
+                  class="tablinks"
+                  onclick="openContent(event,'mountain')"
+                >
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Mountains
+                </button>
+                <button class="tablinks" onclick="openContent(event,'hill')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Hills
+                </button>
+              </div>
+              <div>
+                <div id="mountain" class="tabcontent">
+                  <p
+                    style="font-size: large; margin-top: 1%; margin-bottom: 0%"
+                  >
+                    Mountain
+                  </p>
+                  <p>
+                    <a href="mountain.html"> Mountain</a>
+                  </p>
+                  <p>
+                    <a href="hill.html"> Hills</a>
+                  </p>
+                </div>
+                <div id="hill" class="tabcontent">
+                  <p>Hills are beautiful, shine, bright, and many more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!------------------------------------------------ BHUTAN -------------------------------------------->
+          <div class="bhutan">
+            <button onclick="toggleDropdown('bhutandropdown')" class="dropbtn">
+              BHUTAN<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div class="dropdown">
+              <div id="bhutandropdown" class="dropdown-content">
+                <button class="tablinks" onclick="openContent(event,'bhutan1')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Bhutan1
+                </button>
+                <button class="tablinks" onclick="openContent(event,'bhutan2')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Bhutan2
+                </button>
+              </div>
+
+              <div>
+                <div id="bhutan1" class="tabcontent">
+                  <p>Bhutan1 are beautiful, shine, bright, and many more</p>
+                </div>
+                <div id="bhutan2" class="tabcontent">
+                  <p>Bhutan2 are beautiful, shine, bright, and many more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------------------------------------- TIBET -------------------------------------------------->
+          <div class="tibet">
+            <button onclick="toggleDropdown('tibetdropdown')" class="dropbtn">
+              TIBET<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div class="dropdown">
+              <div id="tibetdropdown" class="dropdown-content">
+                <button class="tablinks" onclick="openContent(event,'tibet1')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Tibet1
+                </button>
+                <button class="tablinks" onclick="openContent(event,'tibet2')">
+                  <i id="arrow" class="bi bi-chevron-right"></i>
+                  Tibet2
+                </button>
+              </div>
+              <div>
+                <div id="tibet1" class="tabcontent">
+                  <p>Tibet1 are beautiful, shine, bright, and many more</p>
+                </div>
+                <div id="tibet2" class="tabcontent">
+                  <p>Tibet2 are beautiful, shine, bright, and many more</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------------------------------------- COMPANY ------------------------------------------------->
+          <div class="company">
+            <button onclick="toggleDropdown('companydropdown')" class="dropbtn">
+              COMPANY<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+            <div id="lastcompany" class="dropdown">
+              <div id="companydropdown" class="dropdown-content">
+                <!-- <button onclick="">Company</button>
+                <button onclick="">Company1</button> -->
+                <a href="#">Company</a>
+                <a href="#">Company1</a>
+              </div>
+            </div>
+          </div>
+          <!-----------------------------------------------TOP 10 TREKS------------------------------------------>
+          <div class="top_10">
+            <button
+              onclick="toggleDropdown('topdropdown')"
+              class="dropbtn"
+              id="top_10"
+            >
+              <img src="img/star.png" />TOP 10 TREKS
+            </button>
+            <div id="lasttop" class="dropdown">
+              <div id="topdropdown" class="dropdown-content">
+                <button onclick="">Top</button>
+                <button onclick="">Top1</button>
+                <!-- <a href="#">Top</a>
+              <a href="#">Top1</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="location">
+            <!-- <button class="dropbtn" id="change_location">
+              CHANGE LOCATION<sup><i class="bi bi-caret-down-fill"></i></sup>
+            </button>
+
+            <div id="changelocation" class="location-content">
+              <button onclick="">Top</button>
+              <button onclick="">Top1</button>
+            </div> -->
+
+            <label for="location" id="change_location">Change location</label>
+            <select name="location" id="locations">
+              <option value="Nepal">Nepal</option>
+              <option value="China">China</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-----------Showcase and search---------------------------->
+
+    <!-----------------------------------------------------------------------Main content------------------------------------------------------->
+    <main>
+      <!----------Showcase-content-------->
+      <div class="showcase-content">
+        <h1>Experience the Difference!</h1>
+
+        <div class="container">
+          <div class="word" id="discover">THRIVE</div>
+          <div class="word" id="thrive">DISCOVER</div>
+          <div class="word" id="explore">EXPLORE</div>
+        </div>
+        <!-- showcase-search -->
+        <div class="search-box">
+          <form id="form">
+            <input
+              type="text"
+              id="query"
+              name="search"
+              placeholder="Search Trip"
+            />
+          </form>
+        </div>
+        <div class="icons">
+          <table>
+            <tr>
+              <th class="images"><img src="img/exp.png" /></th>
+              <th class="txt">
+                10 years+
+                <div>Experience</div>
+              </th>
+              <th class="images"><img src="img/review.png" /></th>
+              <th class="txt">
+                2000+
+                <div>TopAdvisor Reviews</div>
+              </th>
+              <th class="images"><img src="img/budget.png" /></th>
+              <th class="txt">
+                Best Price
+                <div>Guaranteed</div>
+              </th>
+              <th class="images"><img src="img/leaf.png" /></th>
+              <th class="txt">
+                Committed To
+                <div>Sustinability</div>
+              </th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-----Best-seller----->
+    <section class="best-seller">
+      <div class="best-title"><h1>Our Best Seller for 2024</h1></div>
+
+      <p id="best">Join us on our trending adventure this year</p>
+
+      <div id="slideshow-container">
+        <button id="leftButton">
+          <i class="bi bi-caret-left-square-fill custom-icon"></i>
+        </button>
+        <div id="image-container">
+          <div class="slide">
+            <a href=""
+              ><img src="img/best_seller/img1.jpg" alt="Image 1" />
+              <div class="show-content">
+                <div>1</div>
+                <div>
+                  <p>
+                    Enjoy an exciting journey across the Khumbu region's trails
+                    with the stunning vistas of mountain peaks and the world's
+                    highest peak...
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="slide">
+            <a href=""
+              ><img src="img/best_seller/img2.jpg" alt="Image 2" />
+              <div class="show-content">
+                <div>2</div>
+                <div>
+                  <p>
+                    Trek to Everest Base Camp in an old fashioned way by driving
+                    to the trailhead instead of taking flights...
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="slide">
+            <a href=""
+              ><img src="img/best_seller/img3.jpg" alt="Image 3" />
+              <div class="show-content">
+                <div>3</div>
+                <div>
+                  <p>
+                    Trek to Everest Base Camp in an old fashioned way by driving
+                    to the trailhead instead of taking flights...
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="slide">
+            <a href=""
+              ><img src="img/best_seller/img4.jpg" alt="Image 4" />
+              <div class="show-content">
+                <div>4</div>
+                <div>
+                  <p>
+                    Trek to Everest Base Camp in an old fashioned way by driving
+                    to the trailhead instead of taking flights...
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+
+          <div class="slide">
+            <a href=""
+              ><img src="img/best_seller/img4.jpg" alt="Image 4" />
+              <div class="show-content">
+                <div>5</div>
+                <div>
+                  <p>
+                    Trek to Everest Base Camp in an old fashioned way by driving
+                    to the trailhead instead of taking flights...
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="slide">
+            <a href=""
+              ><img src="img/best_seller/img4.jpg" alt="Image 4" />
+              <div class="show-content">
+                <div>6</div>
+                <div>
+                  <p>
+                    Trek to Everest Base Camp in an old fashioned way by driving
+                    to the trailhead instead of taking flights...
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="slide">
+            <a href=""
+              ><img src="img/best_seller/img4.jpg" alt="Image 4" />
+              <div class="show-content">
+                <div>7</div>
+                <div>
+                  <p>
+                    Trek to Everest Base Camp in an old fashioned way by driving
+                    to the trailhead instead of taking flights...
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
+        <button id="rightButton">
+          <i class="bi bi-caret-right-square-fill custom-icon"></i>
+        </button>
+      </div>
+    </section>
+
+    <!------------------------------Why Ace??-------------------------------------->
+    <section class="why-Ace">
+      <div id="ace-Heading"><h1>Why Ace ?</h1></div>
+      <p id="line">________</p>
+      <p>
+        We have been helping you to explore the Himalayas since 2006. With local
+        experts in Nepal, we are dedicated to
+        <br />promoting eco-friendly and responsible tourism for your
+        unforgettable Himalayan adventure.
+      </p>
+      <div id="Ace-box">
+        <div class="box-container">
+          <!-- Boxes above -->
+          <div class="box">
+            <img src="img/why_Ace/expert.png" />
+            <h3>Local Himalayan Experts</h3>
+            <p>
+              Local Himalayan Experts Dedicated local professionals are
+              primarily based in our travel destinations and work exclusively
+              for Ace the Himalaya to give you an authentic Himalayan
+              experience.
+            </p>
+          </div>
+          <div class="box">
+            <img src="img/why_Ace/safety.png" />
+            <h3>High Standard of Safety prioritized</h3>
+            <p>
+              Local Himalayan Experts Dedicated local professionals are
+              primarily based in our travel destinations and work exclusively
+              for Ace the Himalaya to give you an authentic Himalayan
+              experience.
+            </p>
+          </div>
+          <div class="box">
+            <img src="img/why_Ace/best-value.png" />
+            <h3>Unbeatable Value</h3>
+            <p>
+              Local Himalayan Experts Dedicated local professionals are
+              primarily based in our travel destinations and work exclusively
+              for Ace the Himalaya to give you an authentic Himalayan
+              experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="box-container">
+          <!-- Boxes below -->
+          <div class="box">
+            <img src="img/why_Ace/top_notch.png" />
+            <h3>Top-Notch Service</h3>
+            <p>
+              Local Himalayan Experts Dedicated local professionals are
+              primarily based in our travel destinations and work exclusively
+              for Ace the Himalaya to give you an authentic Himalayan
+              experience.
+            </p>
+          </div>
+          <div class="box">
+            <img src="img/why_Ace/social-res.png" />
+            <h3>Socially Responsible</h3>
+
+            <p>
+              Local Himalayan Experts Dedicated local professionals are
+              primarily based in our travel destinations and work exclusively
+              for Ace the Himalaya to give you an authentic Himalayan
+              experience.
+            </p>
+          </div>
+          <div class="box">
+            <img src="img/why_Ace/depature.png" />
+            <h3>Guaranteed Departures</h3>
+            <p>
+              Local Himalayan Experts Dedicated local professionals are
+              primarily based in our travel destinations and work exclusively
+              for Ace the Himalaya to give you an authentic Himalayan
+              experience.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="whyAceButton">
+        <button><a href="">FIND OUT MORE</a></button>
+      </div>
+    </section>
+
+    <!-------------Journey to the himalayas------------------>
+    <section class="journeyHimalayas">
+      <div class="journeyParagraph">
+        <div id="heading">
+          <p id="journeyHead">Journey to the</p>
+
+          <p id="journeyHead">Himalayas Lands</p>
+          <p id="line">________</p>
+          <p>
+            Unveiling Hidden Wonders: Nepal, Bhutan, Tibet, and Beyond - Inspire
+            Your Journey!
+          </p>
+        </div>
+      </div>
+
+      <a href="">
+        <div id="nepal-heading"><p>NEPAL</p></div></a
+      >
+      <div id="butanTibet">
+        <a href=""
+          ><div id="bhutan-heading">
+            <p>Bhutan</p>
+          </div></a
+        >
+
+        <a href="">
+          <div id="tibet-heading"><p>Tibet</p></div></a
+        >
+      </div>
+    </section>
+
+    <!-----Activiteis we offer--------->
+    <section class="activitiesOffer">
+      <div class="activities">
+        <h1>Activities we offer</h1>
+      </div>
+      <p id="line">__________</p>
+      <p>
+        Explore the wide array of experiences provided by our team, designed to
+        cater to your diverse interests and needs.
+      </p>
+
+      <div id="activitiesHead">
+        <button id="leftBtn">
+          <i class="bi bi-chevron-compact-left btn"></i>
+        </button>
+        <div id="activities-container">
+          <div id="activities-slide">
+            <a href="">
+              <img src="" />
+              <div class="activities-content">hiii</div></a
+            >
+          </div>
+
+          <div id="activities-slide">
+            <a href="">
+              <img src="" />
+              <div class="activities-content">Hiii1</div></a
+            >
+          </div>
+          <div id="activities-slide">
+            <a href="">
+              <img src="" />
+              <div class="activities-content">hiii2</div></a
+            >
+          </div>
+          <div id="activities-slide">
+            <a href="">
+              <img src="" />
+              <div class="activities-content">hiii4</div></a
+            >
+          </div>
+        </div>
+        <button id="rightBtn">
+          <i class="bi bi-chevron-compact-right btn"></i>
+        </button>
+      </div>
+    </section>
+    <!----------------------------------------------------------------footer---------------------------------------------------------------------->
+
+    <script src="javascript.js"></script>
+  </body>
+</html>

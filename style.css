@@ -1,0 +1,675 @@
+body {
+  overflow-x: hidden;
+  background-color: rgb(249, 248, 248);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*********************************************Header******************************************************************/
+header {
+  background-color: black;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between; /*Ensure items are spaced apart */
+  align-items: center; /* Vertically center items */
+  z-index: 2;
+}
+
+.navbar {
+  display: flex; /*make dropdroam a flex container*/
+  color: #f2f2f2;
+  align-items: center;
+  margin: 0;
+}
+
+/* .dropdown a {
+   margin-right: 10%; */
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  color: #f2f2f2;
+  padding: 16px 24px;
+  font-size: 95%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: rgb(45, 125, 236);
+}
+
+/* #log {
+  display: flex;
+  text-align: center;
+} */
+
+#logo img {
+  width: 120px;
+  height: auto;
+  margin-left: 10%;
+  margin-bottom: 0%;
+}
+
+#change_location {
+  margin-left: 0%;
+  margin-right: 5%;
+  font-size: 95%;
+}
+
+#top_10 {
+  margin-right: 200px;
+  border: 2px solid white;
+  padding: 10px 12px;
+}
+
+#top_10 img {
+  height: 15px;
+  width: auto;
+}
+
+#top_10:hover {
+  background-color: rgb(45, 125, 236);
+  color: wheat;
+}
+
+.bi {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+#arrow {
+  float: right;
+}
+
+/***********************************************DROPDOWN-CONTNET****************************************************************/
+
+.dropdown {
+  position: absolute;
+  background-color: aqua;
+  top: 100%;
+  left: 10%;
+  width: 85%;
+  z-index: 1;
+}
+.dropdown-content {
+  background-color: #f1f1f1;
+  position: absolute;
+  /* border: 1px solid #8a8a8a; */
+  display: none;
+  /* min-height: 200px; */
+  width: 15%;
+  top: 100%;
+  left: 10%;
+  z-index: 2;
+}
+
+.dropdown-content button {
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  font-size: 14px;
+}
+
+.dropdown-content button.active {
+  background: #ddd;
+}
+
+/*****company dropdwon *************************/
+.dropdown-content a {
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 14px 10px;
+}
+
+.dropdown-content button:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/**********************************************Tab-content********************************************************/
+
+.tabcontent {
+  background-color: #f1f1f1;
+  float: left;
+  color: black;
+  /* min-height: 200px; */
+  display: none;
+  position: absolute;
+  overflow: auto;
+  border-left: none;
+  left: 25%;
+  width: 60%;
+  z-index: 2;
+}
+
+.tabcontent,
+.dropdown-content {
+  min-height: 200px;
+}
+
+.tabcontent p {
+  font-size: 14px;
+}
+.tabcontent a {
+  text-decoration: none;
+  color: rgb(90, 88, 88);
+}
+
+.tabcontent a:hover {
+  color: rgb(45, 125, 236);
+}
+
+.dropdown .tablinks {
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  font-size: 14px;
+  color: black;
+}
+
+#lastcompany {
+  position: absolute;
+  left: 46%;
+  width: 100%;
+}
+
+#lasttop {
+  position: absolute;
+  left: 54%;
+  width: 100%;
+}
+/***************************************************Main**************************************************/
+main {
+  background: url(img/hills.jpg) no-repeat center center/cover;
+  min-height: 750px;
+  margin-top: 0%;
+  width: 100vw;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  /*justify-content: center; /* Center content vertically */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+  box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+/*********************search*****************************/
+
+.showcase-content {
+  font-family: "Inter" sans-serif;
+  margin-top: 15%;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.showcase-content h1 {
+  margin-bottom: 0%;
+}
+
+.search-box input[type="text"] {
+  position: absolute;
+  width: 1000px;
+  height: 30px;
+  border-radius: 20px;
+  left: 15%;
+  margin-top: 11%;
+  border: none;
+  background-image: url(img/search.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 99%;
+  background-size: 30px;
+  padding: 12px 20px 12px 40px;
+}
+
+.container {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 5%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+
+/****Icon*****/
+.icons {
+  position: relative;
+  margin-top: 35%;
+}
+
+.icons img {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin-right: 0px;
+}
+
+.txt {
+  font-size: 12px;
+  padding-left: 5px;
+  padding-right: 100px;
+  text-align: left;
+}
+.images {
+  margin: 0;
+}
+/**********************************Section-Best-seller********************************************************/
+.best-seller {
+  /* text-align: center; */
+  margin-top: 5%;
+  width: 100vw;
+  position: absolute;
+}
+
+.best-title h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.best-title,
+.best-seller p {
+  text-align: center;
+}
+
+.best-seller p {
+  margin-bottom: 50px;
+}
+
+#slideshow-container {
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-container {
+  display: flex;
+  height: 360px;
+  width: 75.4%;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+#leftButton,
+#rightButton {
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background-color: white;
+  opacity: 1;
+}
+
+#rightButton :hover,
+#leftButton :hover {
+  opacity: 0.5;
+}
+
+.custom-icon {
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  float: left;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-top: 9px;
+  display: flex;
+  height: 340px;
+  width: 270px;
+  border: 1px solid rgb(142, 141, 140);
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Add smooth transition for the transform property */
+}
+.slide:hover {
+  transform: scale(
+    1.05
+  ); /* Scale the image to 120% of its original size on hover */
+  opacity: 0.8;
+}
+.slide p {
+  text-align: left;
+}
+
+#slideshow-container img {
+  height: 200px;
+  width: 270px;
+  margin-bottom: 15px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom: none;
+}
+.show-content {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.slide a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  font-size: 16px;
+}
+
+.slide p {
+  color: rgb(165, 164, 164);
+  font-weight: normal;
+}
+/**********Section- Why-Ace?****************/
+.why-Ace {
+  position: flex;
+  margin-top: 45%;
+  text-align: center;
+  background-color: rgb(235, 235, 235);
+  margin-left: 0;
+}
+#ace-Heading h1 {
+  padding-top: 60px;
+  line-height: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#Ace-box {
+  margin-top: 50px;
+}
+/* Styling for the boxes */
+.box {
+  width: 350px;
+  height: 250px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+}
+.box img {
+  height: 60px;
+  width: auto;
+}
+.box p,
+h3 {
+  text-align: center;
+}
+
+.box p {
+  color: rgb(95, 94, 94);
+  font-weight: lighter;
+  line-height: 25px;
+}
+
+/* Styling to arrange boxes in rows */
+.box-container {
+  text-align: center;
+}
+
+#whyAceButton button {
+  background-color: rgb(86, 74, 255);
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+#whyAceButton a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+#whyAceButton :hover {
+  background-color: black;
+}
+
+/**********Journey to the Himalayas Land*****************/
+
+.journeyHimalayas {
+  width: 100%;
+  position: flex;
+  height: 600px;
+  width: 100vw;
+  align-items: center;
+  overflow: hidden;
+}
+
+.journeyParagraph {
+  display: flex;
+  float: left;
+  text-align: center;
+  padding-top: 12%;
+  padding-left: 200px;
+  padding-right: 100px;
+}
+
+#heading {
+  text-align: left;
+  line-height: 20px;
+  height: auto;
+  width: 250px;
+}
+
+#journeyHead {
+  font-size: 25px;
+  line-height: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#nepal-heading {
+  background-image: url(img/journeyHimalayas/nepal.jpg);
+  background-size: cover;
+  background-size: 100% 100%;
+  overflow: hidden;
+  float: left;
+  width: 300px;
+  height: 450px;
+  text-align: center;
+  margin-top: 5%;
+  margin-right: 2%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  opacity: 0.92;
+}
+
+#nepal-heading:hover {
+  transform: scale(1.07);
+  opacity: 1;
+}
+
+#nepal-heading p {
+  font-weight: lighter;
+  color: white;
+  font-size: 25px;
+  padding-top: 50%;
+}
+
+#butanTibet {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 2%;
+  margin-top: 5%;
+  margin-right: 0;
+}
+
+#bhutan-heading {
+  background-image: url(img/journeyHimalayas/bhutan.jpg);
+  background-size: cover;
+  background-size: 100% 100%;
+  overflow: hidden;
+  width: 400px;
+  height: 210px;
+  margin-right: 2%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  opacity: 0.92;
+}
+
+#bhutan-heading:hover {
+  transform: scale(1.07);
+  opacity: 1;
+}
+
+#tibet-heading {
+  background-image: url(img/journeyHimalayas/tibet.jpg);
+  background-size: cover;
+  background-size: 100% 100%;
+  overflow: hidden;
+  width: 400px;
+  height: 210px;
+  margin-top: 5%;
+  margin-right: 2%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  opacity: 0.92;
+}
+
+#tibet-heading:hover {
+  transform: scale(1.07);
+  opacity: 1;
+}
+
+#bhutan-heading p,
+#tibet-heading p {
+  color: white;
+  font-size: 25px;
+  padding-top: 15%;
+}
+
+#line {
+  line-height: 0;
+  color: orange;
+  font-weight: bolder;
+  font-size: 12px;
+}
+/************Activities we offer****************************/
+.activitiesOffer {
+  width: 100vw;
+  text-align: center;
+}
+
+.activities h1 {
+  line-height: 0;
+  margin-bottom: 0;
+}
+#activitiesHead {
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#activities-slide {
+  float: left;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-top: 9px;
+  display: flex;
+  height: 340px;
+  width: 270px;
+  border: 1px solid rgb(142, 141, 140);
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Add smooth transition for the transform property */
+}
+
+.activities-content {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#activities-container {
+  display: flex;
+  height: 360px;
+  width: 75.4%;
+  overflow: hidden; /* Hide overflowing content */
+}
+#activities-slide a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  font-size: 16px;
+}
+
+#activitiesHead img {
+  height: 200px;
+  width: 270px;
+  margin-bottom: 15px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom: none;
+}
+
+#leftBtn,
+#rightBtn {
+  border: none;
+  border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background-color: rgb(249, 248, 248);
+  opacity: 1;
+}
+
+#rightBtn:hover,
+#leftBtn:hover {
+  opacity: 1;
+  background-color: rgb(43, 43, 43);
+}
+
+.btn {
+  font-size: 45px;
+  margin: 0;
+  color: rgb(12, 12, 12);
+  padding: 0;
+}
+
+.btn:hover {
+  color: white;
+}
+
+/*****footer******/
+
+footer {
+  bottom: 0;
+  position: absolute;
+}
